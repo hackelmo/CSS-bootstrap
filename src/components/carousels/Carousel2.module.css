@@ -1,0 +1,79 @@
+.section input[id*="slide"] {
+  display: none;
+}
+
+.section .slidewrap {
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section .slidelist {
+  font-size: 0;
+
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.section .slidelist > li {
+  display: inline-block;
+
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.section .slidelist > li > div {
+  display: block;
+}
+
+.section .slidelist > li > div img {
+  width: 100%;
+}
+
+.section .slidelist .left {
+  left: 30px;
+  background: url("../../../public/images/left.png") center center / 100%
+    no-repeat;
+}
+
+.section .slidelist .right {
+  right: 30px;
+  background: url("../../../public/images/right.png") center center / 100%
+    no-repeat;
+}
+
+.section [id="slide01"]:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(0);
+}
+.section [id="slide02"]:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(-100%);
+}
+
+.section [id="slide03"]:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(-200%);
+}
+
+/* 화살표 */
+
+.section .slideControl > div > label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 50px;
+}
+
+.section .slideControl [class*="control"] {
+  display: none;
+}
+
+.section [id="slide01"]:checked ~ .slidewrap .control01 {
+  display: block;
+}
+.section [id="slide02"]:checked ~ .slidewrap .control02 {
+  display: block;
+}
+.section [id="slide03"]:checked ~ .slidewrap .control03 {
+  display: block;
+}
