@@ -1,0 +1,195 @@
+/* radio input 안보이게하기 */
+[name="slide"] {
+  display: none;
+}
+
+.slidebox {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* 이미지로 반응형주기 */
+.slidebox img {
+  max-width: 100%;
+}
+
+.slidebox .slidelist {
+  /* vertical-align: middle; */
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slidebox .slideitem {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.35s;
+}
+
+.slidebox .slideitem label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+label.left {
+  left: 20px;
+  background-color: #5f5f5f;
+  background-image: url("../../../public//images/left.png");
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+label.right {
+  right: 20px;
+  background-color: #5f5f5f;
+  background-image: url("../../../public//images/right.png");
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+/* 체크가 되면 반응하게 */
+[id="slide01"]:checked ~ .slidelist .slideitem {
+  transform: translateX(0);
+  animation: slide01 20s infinite;
+}
+[id="slide02"]:checked ~ .slidelist .slideitem {
+  transform: translateX(-100%);
+  animation: slide02 20s infinite;
+}
+[id="slide03"]:checked ~ .slidelist .slideitem {
+  transform: translateX(-200%);
+  animation: slide03 20s infinite;
+}
+[id="slide04"]:checked ~ .slidelist .slideitem {
+  transform: translateX(-300%);
+  animation: slide04 20s infinite;
+}
+
+/* 자동으로 넘어가게 */
+@keyframes slide01 {
+  0% {
+    left: 0%;
+  }
+  23% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  48% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  73% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide02 {
+  0% {
+    left: 0%;
+  }
+  23% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  48% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  73% {
+    left: -200%;
+  }
+  75% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide03 {
+  0% {
+    left: 0%;
+  }
+  23% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  48% {
+    left: -100%;
+  }
+  50% {
+    left: 200%;
+  }
+  73% {
+    left: 200%;
+  }
+  75% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide04 {
+  0% {
+    left: 0%;
+  }
+  23% {
+    left: 0%;
+  }
+  25% {
+    left: 300%;
+  }
+  48% {
+    left: 300%;
+  }
+  50% {
+    left: 200%;
+  }
+  73% {
+    left: 200%;
+  }
+  75% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}

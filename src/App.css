@@ -1,7 +1,11 @@
 .container {
   background-color: #66a183;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.text {
+  /* white-space: nowrap; */
+  width: 250px;
+  height: 100px;
+  background-color: yellow;
 }

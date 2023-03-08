@@ -12,17 +12,17 @@ export default function Carousel2() {
         <ul className={styles.slidelist}>
           <li>
             <div>
-              <img src="/images/prada1.webp" alt="pic1" width={100} />
+              <img src="/images/prada1.webp" alt="pic1" />
             </div>
           </li>
           <li>
             <div>
-              <img src="/images/prada3.webp" alt="pic2" width={100} />
+              <img src="/images/prada3.webp" alt="pic2" />
             </div>
           </li>
           <li>
             <div>
-              <img src="/images/prada4.webp" alt="pic3" width={100} />
+              <img src="/images/prada4.webp" alt="pic3" />
             </div>
           </li>
           <div className={styles.slideControl}>
