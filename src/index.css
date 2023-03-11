@@ -1,3 +1,9 @@
+:root {
+  --text-color: #f0f4f5;
+  --accent-color: #d39732;
+  --background-color: #263343;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 ul,

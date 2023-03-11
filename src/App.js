@@ -1,10 +1,10 @@
 import "./App.css";
-import Grid from "./components/grid/Grid";
+import Navbar from "./components/nav/Navbar";
 
 function App() {
   return (
     <div className="container">
-      <Grid />
+      <Navbar />
     </div>
   );
 }
